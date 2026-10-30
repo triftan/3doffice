@@ -40,6 +40,3 @@ Live site: https://opc-3d-office.vercel.app
   shared server database.
 - These are on-demand chat agents, not autonomous background agents.
   They do not send email, book calls, or move money on their own.
-- Office behaviours (confetti on finish, jumping on finish, office
-  dog, desk signs) were inspired by AgentSystemLabs/agent-office
-  (MIT), adapted here in original code for this static site.
