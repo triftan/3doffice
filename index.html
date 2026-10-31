@@ -60,16 +60,16 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
 const AGENTS=[
  {id:'offer',name:'Offer Architect',color:0x38bdf8,role:'Turns your expertise into a packaged, priced offer',pos:[-4.5,0,-3],quick:['Build my offer','Define my buyer','Answer objections'],
-  system:'You are Offer Architect, an AI agent in Brandon Lee\'s One Person Company office. Build offers ONLY with Alex Hormozi\'s $100M Offers framework. Step 1: Value Equation — Dream Outcome x Perceived Likelihood of Achievement, divided by Time Delay x Effort and Sacrifice. Increase the top, decrease the bottom. Step 2: List every problem the buyer has before, during and after buying, then list a solution for each problem. Step 3: Trim and Stack — keep only solutions that move the dream outcome, bundle them as one offer, and name each part. Step 4: Scarcity (limited seats/slots), Urgency (deadline, bonus expiry), Bonuses (solve a remaining problem, each with a value), and Guarantees (reverse risk: if you do X and do not get Y in Z, we do W). Step 5: Name the offer, state who it is for and not for, and price it only if the user gives a price or asks for a price range; otherwise say price is worked out on a call. Be concrete, short, and practical. Never invent revenue claims, testimonials, or client results.',
+  system:'You are Offer Architect, an AI agent in Brandon Lee\'s One Person Company office. Build offers ONLY with Alex Hormozi\'s $100M Offers framework. Step 1: Value Equation — Dream Outcome x Perceived Likelihood of Achievement, divided by Time Delay x Effort and Sacrifice. Increase the top, decrease the bottom. Step 2: List every problem the buyer has before, during and after buying, then list a solution for each problem. Step 3: Trim and Stack — keep only solutions that move the dream outcome, bundle them as one offer, and name each part. Step 4: Scarcity (limited seats/slots), Urgency (deadline, bonus expiry), Bonuses (solve a remaining problem, each with a value), and Guarantees (reverse risk: if you do X and do not get Y in Z, we do W). Step 5: Name the offer, state who it is for and not for, and price it only if the user gives a price or asks for a price range; otherwise say price is worked out on a call. Be concrete, short, and practical. Never invent revenue claims, testimonials, or client results. Reply in plain text only, no asterisks, no bold, no italics, no headings, no markdown, no bullet symbols, short lines, one idea per line.',
   demo:'DEMO OFFER\nOffer: AI coaching for busy business owners, 4 weeks, done with you.\nPromise: Save 15 hours a week, with a business that keeps running.\nBuyer: Business owners doing everything themselves.\nObjections: Not technical? We build it with you. No time? 90 minutes a week. Will it work? Start with the one job that hurts most.'},
  {id:'prospector',name:'Prospector',color:0x7ee2a8,role:'Finds prospects, researches them, and emails in your voice',pos:[4.5,0,-3],quick:['Find 10 prospects','Draft 3 emails','Write a follow-up'],
-  system:'You are Prospector, an AI agent in Brandon Lee\'s One Person Company office. Follow Brandon\'s own method, in order: 1 Find — build a list that fits the user\'s ideal profile only. 2 Research — one specific, real observation per prospect (what they teach, sell, or post). 3 Qualify — fit, pain, and timing, and drop bad fits. 4 Personalise — every email different, subject and body tied to that observation, in the user\'s voice. 5 Send and follow up — short, one ask, no hard sell. Do not invent real contact details. Use sample names only unless the user supplies real ones.',
+  system:'You are Prospector, an AI agent in Brandon Lee\'s One Person Company office. Follow Brandon\'s own method, in order: 1 Find — build a list that fits the user\'s ideal profile only. 2 Research — one specific, real observation per prospect (what they teach, sell, or post). 3 Qualify — fit, pain, and timing, and drop bad fits. 4 Personalise — every email different, subject and body tied to that observation, in the user\'s voice. 5 Send and follow up — short, one ask, no hard sell. Do not invent real contact details. Use sample names only unless the user supplies real ones. Reply in plain text only, no asterisks, no bold, no italics, no headings, no markdown, no bullet symbols, short lines, one idea per line.',
   demo:'DEMO PROSPECTS\n1. Bright Path Training — schools/training — fits profile\n2. North Star Academy — schools/training — fits profile\n3. City Skills Institute — schools/training — fits profile\nEmail sample: Subject: A quick idea for Bright Path — Hi team, I noticed you teach busy professionals who want practical AI skills, not theory. Would a short call help to see which agent saves your team the most time first?'},
  {id:'money',name:'Money Agent',color:0xf59e0b,role:'Reads invoices, chases payments, gives a Monday snapshot',pos:[-4.5,0,3],quick:['Monday snapshot','Draft a chase email','Categorise my money'],
-  system:'You are Money Agent, an AI agent in Brandon Lee\'s One Person Company office. Follow this loop, in order: 1 Capture — read receipts and invoices. 2 Categorise — what came in, what is owed, what is overdue. 3 Monday Snapshot — cash position, overdue list, and the one action that matters. 4 Chase — draft the chase email, but never send without the user\'s approval. Human-in-the-loop is the rule, so the user keeps the client relationship. Use sample numbers only unless the user supplies real ones.',
+  system:'You are Money Agent, an AI agent in Brandon Lee\'s One Person Company office. Follow this loop, in order: 1 Capture — read receipts and invoices. 2 Categorise — what came in, what is owed, what is overdue. 3 Monday Snapshot — cash position, overdue list, and the one action that matters. 4 Chase — draft the chase email, but never send without the user\'s approval. Human-in-the-loop is the rule, so the user keeps the client relationship. Use sample numbers only unless the user supplies real ones. Reply in plain text only, no asterisks, no bold, no italics, no headings, no markdown, no bullet symbols, short lines, one idea per line.',
   demo:'DEMO MONDAY SNAPSHOT\nCame in: SGD 4,500 last week.\nOwed: SGD 3,200 from 3 clients.\nOverdue: 1 invoice, 7 days, SGD 1,200.\nNeeds you: Approve 1 chase email. Nothing else needs you today.\nChase draft: Hi, just a friendly check, invoice INV-1042 for SGD 1,200 is now 7 days overdue. Could you let me know when payment will be sent?'},
  {id:'content',name:'Content Machine',color:0xf472b6,role:'One voice note in, a week of content out',pos:[4.5,0,3],quick:['Week of content','Turn my idea into posts','Write a video script'],
-  system:'You are Content Machine, an AI agent in Brandon Lee\'s One Person Company office. Follow this repurposing framework: 1 Capture — one voice note or one long video. 2 Extract — the one big idea, then 3 to 5 supporting points. 3 Repurpose — turn that one idea into a week: short post, carousel, email, 60-second script, image idea, and avatar video idea. 4 Distribute — one piece per day, in the user\'s voice, with one clear next step. Keep it practical, one idea per day, and never claim results the user has not given you.',
+  system:'You are Content Machine, an AI agent in Brandon Lee\'s One Person Company office. Follow this repurposing framework: 1 Capture — one voice note or one long video. 2 Extract — the one big idea, then 3 to 5 supporting points. 3 Repurpose — turn that one idea into a week: short post, carousel, email, 60-second script, image idea, and avatar video idea. 4 Distribute — one piece per day, in the user\'s voice, with one clear next step. Keep it practical, one idea per day, and never claim results the user has not given you. Reply in plain text only, no asterisks, no bold, no italics, no headings, no markdown, no bullet symbols, short lines, one idea per line.',
   demo:'DEMO WEEK OF CONTENT\nMon: Short post — the one idea, in your voice.\nTue: Email — the story behind it.\nWed: Carousel — 5 slides, why it matters.\nThu: Video script — 60 seconds, hook first.\nFri: Post — one example, one result.\nSat: Email — objection answered, plus call to book.\nSun: Recap — the week, and what is next.'},
 ];
 let selected=AGENTS[0], histories={}, totalCost=0;
@@ -191,7 +191,7 @@ function burstConfetti(x,y,z){const cols=[0xef476f,0xffd166,0x06d6a0,0x118ab2,0x
 function updateConfetti(dt){confettiBits=confettiBits.filter(m=>{m.userData.life-=dt;if(m.userData.life<=0){confettiGroup.remove(m);return false}m.userData.vy-=4*dt;m.position.x+=m.userData.vx*dt;m.position.y+=m.userData.vy*dt;m.position.z+=m.userData.vz*dt;if(m.position.y<0.05)m.position.y=0.05;m.rotation.x+=m.userData.spin*dt;m.rotation.y+=m.userData.spin*dt;return true})}
 // Office dog
 const dog=new THREE.Group();const dogBody=new THREE.Mesh(new THREE.BoxGeometry(0.5,0.25,0.3),new THREE.MeshStandardMaterial({color:0xd4a373}));dogBody.position.y=0.25;dog.add(dogBody);const dogHead=new THREE.Mesh(new THREE.BoxGeometry(0.25,0.25,0.25),new THREE.MeshStandardMaterial({color:0xd4a373}));dogHead.position.set(0.35,0.4,0);dog.add(dogHead);const dogEar1=new THREE.Mesh(new THREE.BoxGeometry(0.08,0.16,0.05),new THREE.MeshStandardMaterial({color:0x8b5a2b}));dogEar1.position.set(0.32,0.55,0.08);dog.add(dogEar1);const dogEar2=dogEar1.clone();dogEar2.position.z=-0.08;dog.add(dogEar2);const dogNose=new THREE.Mesh(new THREE.SphereGeometry(0.05,10,8),new THREE.MeshStandardMaterial({color:0x111111}));dogNose.position.set(0.49,0.38,0);dog.add(dogNose);for(const dz of[-0.08,0.08]){const dogEye=new THREE.Mesh(new THREE.SphereGeometry(0.03,8,8),new THREE.MeshBasicMaterial({color:0x111111}));dogEye.position.set(0.46,0.45,dz);dog.add(dogEye);}for(const dx of[-0.15,0.15])for(const dz of[-0.1,0.1]){const dogLeg=new THREE.Mesh(new THREE.BoxGeometry(0.08,0.18,0.08),new THREE.MeshStandardMaterial({color:0x8b5a2b}));dogLeg.position.set(dx,0.09,dz);dog.add(dogLeg);}const dogTail=new THREE.Mesh(new THREE.BoxGeometry(0.05,0.25,0.05),new THREE.MeshStandardMaterial({color:0x8b5a2b}));dogTail.position.set(-0.3,0.45,0);dog.add(dogTail);dog.position.set(0,0,1.5);scene.add(dog);let dogTarget=null;
-function dogTo(x,z){dogTarget=new THREE.Vector3(x,0,z);}
+function dogTo(x,z){const from=dog.position;const dx=from.x-x,dz=from.z-z,d=Math.hypot(dx,dz)||1;const ax=x+dx/d*1.3,az=z+dz/d*1.3;const extra=[];AGENTS.forEach(a=>{const c=characters[a.id];if(Math.hypot(c.position.x-x,c.position.z-z)<0.5)return;extra.push({x:c.position.x,z:c.position.z,r:1.2});});dogPath=planPath(from.x,from.z,ax,az,extra);dogPathIndex=0;dogTarget=new THREE.Vector3(ax,0,az);}
 // Desk signs with agent names
 AGENTS.forEach(a=>{const c=document.createElement('canvas');c.width=256;c.height=64;const ctx=c.getContext('2d');ctx.fillStyle='#ffffff';ctx.fillRect(0,0,256,64);ctx.fillStyle='#'+a.color.toString(16).padStart(6,'0');ctx.fillRect(0,0,256,10);ctx.fillStyle='#111';ctx.font='bold 24px system-ui';ctx.textAlign='center';ctx.fillText(a.name,128,42);const tex=new THREE.CanvasTexture(c);const sign=new THREE.Mesh(new THREE.PlaneGeometry(1.1,0.28),new THREE.MeshBasicMaterial({map:tex}));sign.position.set(a.pos[0],0.95,a.pos[2]+(a.pos[2]>0?-1.45:1.45));sign.rotation.y=a.pos[2]>0?Math.PI:0;scene.add(sign);});
 
@@ -212,14 +212,15 @@ window.boardCopy=i=>copyText(savedOutputs[i].text);window.boardHandoff=(i,to)=>h
 function openBoard(){const list=document.getElementById('boardList');if(!savedOutputs.length)list.innerHTML='<p class="small">Nothing saved yet. Click Save on any agent reply.</p>';else list.innerHTML=savedOutputs.map((s,i)=>`<div class="boardItem"><b>${s.agentName}</b> <span class="small">${s.time}</span><pre>${s.text.replace(/</g,'&lt;')}</pre><div class="msgActions"><button onclick="boardCopy(${i})">Copy</button><button onclick="boardHandoff(${i},'offer')">Send to Offer</button><button onclick="boardHandoff(${i},'prospector')">Send to Prospector</button><button onclick="boardHandoff(${i},'money')">Send to Money</button><button onclick="boardHandoff(${i},'content')">Send to Content</button><button onclick="boardDelete(${i})">Delete</button></div></div>`).join('');document.getElementById('boardModal').style.display='flex'}
 function closeBoard(){document.getElementById('boardModal').style.display='none'}
 window.openBoard=openBoard;window.closeBoard=closeBoard;
-function addMsg(text,cls,save=true){const d=document.createElement('div');d.className='msg '+cls;const span=document.createElement('span');span.textContent=text;d.appendChild(span);if(cls==='ai'&&save){const acts=document.createElement('div');acts.className='msgActions';const agentId=selected.id;const b1=document.createElement('button');b1.textContent='Copy';b1.onclick=()=>copyText(text);const b2=document.createElement('button');b2.textContent='Save';b2.onclick=()=>saveOutput(agentId,text);acts.append(b1,b2);AGENTS.filter(a=>a.id!==agentId).forEach(a=>{const b=document.createElement('button');b.textContent='Send to '+a.name;b.onclick=()=>handoff(agentId,text,a.id);acts.appendChild(b)});d.appendChild(acts)}const c=document.getElementById('chat');c.appendChild(d);c.scrollTop=c.scrollHeight;if(save)histories[selected.id].push({role:cls==='me'?'user':'assistant',text});updateSavedCount();}
+function stripMarkdown(t){return String(t).replace(/\*\*/g,'').replace(/__/g,'').replace(/^#+\s*/gm,'').replace(/\*/g,'');}
+function addMsg(text,cls,save=true){if(cls==='ai')text=stripMarkdown(text);const d=document.createElement('div');d.className='msg '+cls;const span=document.createElement('span');span.textContent=text;d.appendChild(span);if(cls==='ai'&&save){const acts=document.createElement('div');acts.className='msgActions';const agentId=selected.id;const b1=document.createElement('button');b1.textContent='Copy';b1.onclick=()=>copyText(text);const b2=document.createElement('button');b2.textContent='Save';b2.onclick=()=>saveOutput(agentId,text);acts.append(b1,b2);AGENTS.filter(a=>a.id!==agentId).forEach(a=>{const b=document.createElement('button');b.textContent='Send to '+a.name;b.onclick=()=>handoff(agentId,text,a.id);acts.appendChild(b)});d.appendChild(acts)}const c=document.getElementById('chat');c.appendChild(d);c.scrollTop=c.scrollHeight;if(save)histories[selected.id].push({role:cls==='me'?'user':'assistant',text});updateSavedCount();}
 window.sendMsg=async function(){const inp=document.getElementById('userInput');const text=inp.value.trim();if(!text)return;inp.value='';addMsg(text,'me');setStatus('Working...');characters[selected.id].userData.scr.material.color.set(0xffffff);
  let reply='';
  try{const r=await fetch('/api/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({agent:selected.id,model:'deepseek/deepseek-v4.1-flash',text,messages:histories[selected.id].slice(0,-1).map(m=>({role:m.role,content:m.text}))})});
    const j=await r.json();if(!r.ok)throw new Error(j.error||('HTTP '+r.status));reply=j.reply||'(no reply)';
    if(j.usage){const cost=(j.usage.prompt_tokens*0.000000045+j.usage.completion_tokens*0.0000005);totalCost+=cost;}
    }catch(e){reply='Server call failed: '+e.message+'. Demo output:\n'+selected.demo;}
- addMsg(reply,'ai');characters[selected.id].userData.spin=1;characters[selected.id].userData.jump=1;burstConfetti(characters[selected.id].position.x,2.5,characters[selected.id].position.z);dogTo(characters[selected.id].position.x,characters[selected.id].position.z);setStatus('Done, output saved in chat');characters[selected.id].userData.scr.material.color.set(selected.color);
+ addMsg(stripMarkdown(reply),'ai');characters[selected.id].userData.spin=1;characters[selected.id].userData.jump=1;burstConfetti(characters[selected.id].position.x,2.5,characters[selected.id].position.z);dogTo(characters[selected.id].position.x,characters[selected.id].position.z);setStatus('Done, output saved in chat');characters[selected.id].userData.scr.material.color.set(selected.color);
 };
 window.runAll=async function(){for(const a of AGENTS){selectAgent(a);document.getElementById('userInput').value=a.quick[0];await sendMsg();const last=histories[a.id].filter(m=>m.role==='assistant').pop();if(last)saveOutput(a.id,last.text,true);await new Promise(r=>setTimeout(r,400));}selectAgent(AGENTS[0]);alert('Run all done. Check Saved outputs for all 4 results.')};
 document.getElementById('userInput').addEventListener('keydown',e=>{if(e.key==='Enter')sendMsg()});
@@ -232,15 +233,96 @@ renderer.domElement.addEventListener('click',e=>{
  for(const h of hits){let o=h.object;while(o&&!o.userData.agent)o=o.parent;if(o&&o.userData.agent){selectAgent(o.userData.agent);showPanel();break}}
 });
 selectAgent(AGENTS[0]);
+
+// PLANNER START: obstacle routing, so walkers do not pass through objects like ghosts.
+// Obstacles are the objects as built above, in XZ. Boxes use half width/depth, plants are circles.
+// Intermediate grid waypoints keep about 0.6 clearance from each obstacle. The final approach
+// to a home desk or to the coffee front is allowed to come closer, because those destinations
+// sit next to a desk or the bar, but the path never crosses the object itself.
+const COFFEE_FRONT=new THREE.Vector3(-6.5,0,3.2);
+const OBSTACLES=[
+ {x:0,z:0,hx:1.5,hz:0.8},
+ {x:0,z:5.2,hx:1.2,hz:0.5},
+ {x:-6.5,z:4,hx:1.0,hz:0.3},
+ {x:-7.7,z:-3,hx:1.1,hz:0.2},
+ {x:7.7,z:-3,hx:1.1,hz:0.2},
+ {x:-4.5,z:-2.05,hx:0.95,hz:0.5},
+ {x:4.5,z:-2.05,hx:0.95,hz:0.5},
+ {x:-4.5,z:2.05,hx:0.95,hz:0.5},
+ {x:4.5,z:2.05,hx:0.95,hz:0.5},
+];
+const PLANT_OBS=[{x:-7,z:-4,r:0.4},{x:7,z:-4,r:0.4},{x:7,z:4,r:0.4},{x:-7.6,z:1.5,r:0.4}];
+const WALK_PAD=0.6;
+function pointBlockedPad(x,z,pad,extra){
+ for(const o of OBSTACLES){if(Math.abs(x-o.x)<=o.hx+pad && Math.abs(z-o.z)<=o.hz+pad)return true;}
+ for(const pp of PLANT_OBS){const dx=x-pp.x,dz=z-pp.z;if(dx*dx+dz*dz<(pp.r+pad)*(pp.r+pad))return true;}
+ for(const e of (extra||[])){const dx=x-e.x,dz=z-e.z;if(dx*dx+dz*dz<e.r*e.r)return true;}
+ return false;
+}
+function segmentClearPad(x1,z1,x2,z2,pad,extra){
+ const dist=Math.hypot(x2-x1,z2-z1);const steps=Math.max(1,Math.ceil(dist/0.1));
+ for(let i=0;i<=steps;i++){if(pointBlockedPad(x1+(x2-x1)*i/steps,z1+(z2-z1)*i/steps,pad,extra))return false;}
+ return true;
+}
+function planPath(sx,sz,gx,gz,extra){
+ const step=0.5,minX=-7.5,maxX=7.5,minZ=-5.5,maxZ=5.5;
+ const gxOf=x=>Math.round((x-minX)/step),gzOf=z=>Math.round((z-minZ)/step);
+ const wx=gx=>minX+gx*step,wz=gz=>minZ+gz*step;
+ const sKey=gxOf(sx)+','+gzOf(sz),gKey=gxOf(gx)+','+gzOf(gz);
+ if(sKey===gKey)return [new THREE.Vector3(gx,0,gz)];
+ const open=[sKey],came=new Map(),gScore=new Map([[sKey,0]]),fScore=new Map([[sKey,Math.hypot(gx-sx,gz-sz)]]),closed=new Set();
+ const keyOf=(a,b)=>a+','+b;
+ while(open.length){
+  let best=0;for(let i=1;i<open.length;i++){if((fScore.get(open[i])||1e9)<(fScore.get(open[best])||1e9))best=i;}
+  const cur=open.splice(best,1)[0];if(cur===gKey)break;closed.add(cur);
+  const parts=cur.split(',').map(Number),cx=parts[0],cz=parts[1];
+  for(let dx=-1;dx<=1;dx++)for(let dz=-1;dz<=1;dz++){
+   if(!dx&&!dz)continue;const nx=cx+dx,nz=cz+dz,nk=keyOf(nx,nz);
+   if(closed.has(nk))continue;const wxv=wx(nx),wzv=wz(nz);
+   if(wxv<minX||wxv>maxX||wzv<minZ||wzv>maxZ)continue;
+   const nearGoal=Math.hypot(wxv-gx,wzv-gz)<0.6,nearStart=Math.hypot(wxv-sx,wzv-sz)<0.6;
+   if(!nearGoal&&!nearStart&&pointBlockedPad(wxv,wzv,WALK_PAD,extra))continue;
+   const tentative=(gScore.get(cur)||0)+(dx&&dz?1.414:1);
+   if(tentative<(gScore.get(nk)||1e9)){came.set(nk,cur);gScore.set(nk,tentative);fScore.set(nk,tentative+Math.hypot(wxv-gx,wzv-gz));if(!open.includes(nk))open.push(nk);}
+  }
+ }
+ if(!came.has(gKey)&&gKey!==sKey){
+  // No grid route found: fall back to a corridor south of the meeting table, then to goal.
+  return [new THREE.Vector3(sx,0,sz),new THREE.Vector3(0,0,1.8),new THREE.Vector3(gx,0,gz)];
+ }
+ const nodes=[];let cur=gKey;while(cur&&cur!==sKey){const parts=cur.split(',').map(Number);nodes.unshift(new THREE.Vector3(wx(parts[0]),0,wz(parts[1])));cur=came.get(cur);}
+ // Smooth: skip a waypoint when the straight segment keeps 0.3 clearance and avoids other agents.
+ const smooth=[new THREE.Vector3(sx,0,sz)];
+ let i=0;
+ while(i<nodes.length){
+  let far=i;
+  for(let j=nodes.length-1;j>i;j--){const a=smooth[smooth.length-1],b=nodes[j];if(segmentClearPad(a.x,a.z,b.x,b.z,0.3,extra)){far=j;break;}}
+  smooth.push(nodes[far]);i=far+1;
+ }
+ smooth.push(new THREE.Vector3(gx,0,gz));
+ return smooth;
+}
+function otherAgentCircles(exceptId){
+ const out=[];AGENTS.forEach(a=>{if(a.id===exceptId)return;const c=characters[a.id];out.push({x:c.position.x,z:c.position.z,r:1.2});});return out;
+}
+function startWalk(g,goal){
+ const u=g.userData;u.path=planPath(g.position.x,g.position.z,goal.x,goal.z,otherAgentCircles(u.agent.id));u.pathIndex=0;u.finalTarget=goal.clone();u.waitFrames=0;u.walking=true;
+}
+let dogPath=null,dogPathIndex=0;
+// PLANNER END
 let t=0;function animate(){requestAnimationFrame(animate);t+=0.02;
  AGENTS.forEach((a,i)=>{
   const u=characters[a.id].userData, g=characters[a.id];
-  // occasional walk to coffee (viral idle behaviour): only if not selected/working
-  if(!u.walking && Math.random()<0.0006){u.walking=true;u.target=new THREE.Vector3(-6.5,0,4);}
-  if(u.walking && u.target){
-    const dir=new THREE.Vector3().subVectors(u.target,g.position);dir.y=0;const dist=dir.length();
-    if(dist<0.2){ if(u.target.x===-6.5){u.target=g.userData.home.clone();} else {u.walking=false;} }
-    else {dir.normalize();g.position.addScaledVector(dir,0.03);g.rotation.y=Math.atan2(dir.x,dir.z);g.rotation.z=Math.sin(t*12)*0.07;}
+  // occasional walk to coffee: routed around obstacles, to in front of the bar, not inside it
+  if(!u.walking && Math.random()<0.0006){startWalk(g,COFFEE_FRONT);}
+  if(u.walking && u.path){
+    const wp=u.path[u.pathIndex];
+    if(!wp){u.walking=false;u.path=null;}
+    else{
+      const dir=new THREE.Vector3().subVectors(wp,g.position);dir.y=0;const dist=dir.length();
+      if(dist<0.2){u.pathIndex++;if(u.pathIndex>=u.path.length){if(Math.abs(u.finalTarget.x-COFFEE_FRONT.x)<0.01&&Math.abs(u.finalTarget.z-COFFEE_FRONT.z)<0.01){startWalk(g,g.userData.home.clone());}else{u.walking=false;u.path=null;}}}
+      else{dir.normalize();const nx=g.position.x+dir.x*0.03,nz=g.position.z+dir.z*0.03;let tooClose=false;AGENTS.forEach(a=>{if(a.id===u.agent.id)return;const c=characters[a.id];if(Math.hypot(nx-c.position.x,nz-c.position.z)<1.2)tooClose=true;});if(tooClose){u.waitFrames=(u.waitFrames||0)+1;if(u.waitFrames>90){u.waitFrames=0;startWalk(g,u.finalTarget.clone());}}else{u.waitFrames=0;g.position.x=nx;g.position.z=nz;g.rotation.y=Math.atan2(dir.x,dir.z);g.rotation.z=Math.sin(t*12)*0.07;}}
+    }
   } else {
     g.rotation.y=0;g.rotation.z=0;if(u.body){u.body.position.y=Math.sin(t*2+i)*0.03;u.body.scale.y=1+Math.sin(t*2+i)*0.02;}if(u.eyes){const blink=(Math.sin(t*0.6+i*1.7)>0.985)?0.15:1;u.eyes.forEach(e=>{e.scale.y=blink;});if(u.highlights)u.highlights.forEach(h=>{h.visible=blink>0.5;});}
   }
@@ -248,7 +330,7 @@ let t=0;function animate(){requestAnimationFrame(animate);t+=0.02;
  });
  // jump on finish
  AGENTS.forEach(a=>{const u=characters[a.id].userData;if(u.jump>0){characters[a.id].position.y=Math.abs(Math.sin(u.jump*6))*0.4;u.jump-=0.02;if(u.jump<=0)characters[a.id].position.y=0;}});
- if(dogTarget){const d=new THREE.Vector3().subVectors(dogTarget,dog.position);d.y=0;if(d.length()<0.3){dogTarget=null;}else{d.normalize();dog.position.addScaledVector(d,0.05);dog.rotation.y=Math.atan2(d.x,d.z);dogTail.rotation.z=Math.sin(t*20)*0.5;}}
+ if(dogPath&&dogPathIndex<dogPath.length){const wp=dogPath[dogPathIndex];const d=new THREE.Vector3().subVectors(wp,dog.position);d.y=0;if(d.length()<0.25){dogPathIndex++;if(dogPathIndex>=dogPath.length){dogPath=null;dogTarget=null;}}else{d.normalize();const nx=dog.position.x+d.x*0.05,nz=dog.position.z+d.z*0.05;let blockedBy=false;AGENTS.forEach(a=>{const c=characters[a.id];if(dogTarget&&Math.hypot(c.position.x-dogTarget.x,c.position.z-dogTarget.z)>0.5&&Math.hypot(nx-c.position.x,nz-c.position.z)<1.0)blockedBy=true;});if(!blockedBy){dog.position.addScaledVector(d,0.05);dog.rotation.y=Math.atan2(d.x,d.z);dogTail.rotation.z=Math.sin(t*20)*0.5;}}}
  updateConfetti(0.016);
  controls.update();renderer.render(scene,camera)}animate();
 addEventListener('resize',()=>{camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight)});
